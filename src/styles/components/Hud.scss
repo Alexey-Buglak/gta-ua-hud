@@ -1,0 +1,406 @@
+// SPEEDOMETER //
+.hudspeed {
+    position: absolute;
+    bottom: 17px;
+    right: 42px;
+    border-radius: 50%;
+
+
+    &__circle {
+        position: relative;
+        width: 210px;
+        height: 210px;
+    }
+
+    &__params {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px;
+    }
+
+    &__speed-line {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+
+    &__speed-line-full {
+        position: absolute;
+        top: 0;
+    }
+
+    &__speed {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &-text {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 58px;
+            text-align: center;
+            color: $whiteColor;
+        }
+        
+        &-description {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 19px;
+            text-align: center;
+            color: $whiteColor;
+
+        }
+    }
+
+    &__fuel {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 21px;
+
+        &-item {
+            height: 37px;
+            width: 37px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        &-text {
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 13px;
+            color: $whiteColor;
+
+            span {
+                color: $greyColor;
+            }
+        }
+
+        &-icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+
+        &-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &-full {
+                top: 0;
+                left: 0;
+                position: absolute;
+                z-index: 2;
+            }
+        }
+    }
+}
+
+
+// HUD INVITE //
+.hudinvite {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &__item {
+        background: $mainBgColor;
+        border-radius: 25px;
+        padding: 11px 30px 20px;
+        position: relative;
+        max-width: 400px;
+    }
+
+    &__title {
+        color: $blueColor;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #F2F2F2;
+    }
+
+    &__person {
+
+        &-one {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -25px;
+        }
+
+        &-two {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -25px;
+        }
+    }
+}
+
+// BALLANCE //
+.hudballance {
+    position: absolute;
+    right: 12px;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    &__line {
+        width: 1px;
+        height: 100%;
+        background: $whiteColor;
+        content: '';
+        margin: 0px 5px 0px 10px;
+    }
+
+    &__money {
+        color: $whiteColor;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+
+        span {
+            color: $greyColor;
+        }
+    }
+
+
+    &__item {
+        background: $mainBgColor;
+        border-radius: 5px;
+        padding: 0px 5px 0px 10px;
+        display: flex;
+        align-items: center;
+        height: 30px;
+        justify-content: space-between;
+
+        img {
+            min-width: 18px;
+        }
+    }
+}
+
+// HUD INFO //
+.hudinfo {
+    position: absolute;
+    bottom: 20px;
+    left: 17%;
+
+    &__micro {
+        display: flex;
+        gap: 11px;
+        margin-bottom: 7px;
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    &__item {
+        background: $mainBgColor;
+        border-radius: 5px;
+        padding: 7px 25px 7px 15px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 15px;
+        min-width: 180px;
+        margin-top: 8px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            border-radius: 1px;
+            width: 4px;
+            height: 34px;
+            left: 50%;
+            transform: translateX(-50%);
+            left: 0;
+            background: $blueColor;
+        }
+
+    }
+
+    &__content {
+
+        &-title {
+            color: $whiteColor;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+
+            &.blueColor {
+                color: $blueColor;
+            }
+        }
+
+        &-text {
+            font-size: 15px;
+            line-height: 18px;
+            color: $whiteColor;
+        }
+    }
+}
+
+
+// TABS //
+.hudtab {
+    position: absolute;
+    right: 12px;
+    top: 45%;
+    transform: translateY(-55%);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    &__item {
+        background: $mainBgColor;
+        border-radius: 5px;
+        padding: 11px 0px 11px 30px;
+        min-width: 165px;
+        position: relative;
+    }
+
+    &__name {
+        font-size: 17px;
+        line-height: 16px;
+        color: $whiteColor;
+    }
+
+    &__key {
+        position: absolute;
+        padding: 12px;
+        background: $blueColor;
+        border-radius: 5px;
+        font-size: 17px;
+        line-height: 16px;
+        text-transform: uppercase;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $whiteColor;
+    }
+}
+
+
+
+// NOTIFY //
+@keyframes showNotify {
+    0% {
+        $width: 100%;
+    }
+
+    100% {
+        $width: 0%;
+    }
+}
+
+.hudnotify {
+    position: absolute;
+    left: 15px;
+    bottom: 30%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    &__item {
+        background-color: $mainBgColor;
+        border-radius: 5px 5px 2px 2px;
+        display: flex;
+        align-items: center;
+        padding: 20px 30px 14px;
+        max-width: 320px;
+        height: 81px;
+        gap: 18px;
+        border-bottom: 5px solid rgba(255, 255, 255, 0.15);
+        position: relative;
+
+        &::after {
+            $width: 100%;
+            width: $width;
+            position: absolute;
+            content: '';
+            height: 5px;
+            bottom: -5px;
+            border-radius: 0px 0px 0px 2px;
+            left: 0;
+
+            @if $width ==100% {
+                border-radius: 0px 0px 2px 2px;
+            }
+        }
+
+        @media (min-width: 2000px) {
+            max-width: 600px;
+            height: 110px;
+        }
+    }
+
+
+    &__content {
+        &-title {
+            color: $greyColor;
+            font-size: 1.1rem;
+            line-height: 16px;
+
+            @media (min-width: 2000px) {
+                font-size: 2.2rem;
+            }
+        }
+
+        &-text {
+            color: $whiteColor;
+            margin-top: 5px;
+            font-size: 14px;
+            line-height: 13px;
+
+            @media (min-width: 2000px) {
+                margin-top: 10px;
+                font-size: 1.8rem;
+                line-height: 25px;
+            }
+        }
+    }
+}
+
+.whiteLine {
+    &::after {
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+
+.greenLine {
+    &::after {
+        background: #1CD269;
+    }
+}
+
+.yellowLine {
+    &::after {
+        background: #F2C94C;
+    }
+}
+
+.redLine {
+    &::after {
+        background: #EB5757;
+    }
+}
