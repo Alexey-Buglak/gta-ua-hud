@@ -5,8 +5,14 @@
 }
 
 // ASSETS //
-@import './assets/vars';
+@import './vars';
+@import './fonts';
+
 
 // COMPONENTS //
 @import './components/Hud';
 
+body {
+    font-family: 'e-Ukraine';
+    background: coral;
+}
