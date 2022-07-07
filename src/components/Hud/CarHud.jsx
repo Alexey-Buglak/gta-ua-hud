@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PeopleHud from './PeopleHud';
 
 const CarHud = () => {
-    const [fuel, setFuel] = useState(59);
+    const [fuel, setFuel] = useState(10);
     const [speed, setSpeed] = useState(90);
     const maxSpeed = 150
     const speedLine = 504 + ((504/maxSpeed) * speed);

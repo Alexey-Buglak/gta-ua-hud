@@ -13,5 +13,3 @@ const HudNotify = (props) => {
 };
 
 export default HudNotify;
-
-// props.notify.lineColor;
